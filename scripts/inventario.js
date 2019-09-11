@@ -4,39 +4,40 @@ window.onload = function() {
     document.getElementById("botonListContainer").onclick=exploreContainer
   };
 var ultimoIdItem = 1;
-var singladuras = [];  
+var objetos = [];  
 var Items = {
      
       // Inicializa el objeto inventariado
-      init: function (almacen,nombre, inicial, tipo, perecedero) {
+      init: function (almacen, nombre, tipo, caducidad) {
         this.idItem = ultimoIdItem;
         this.almacen = almacen;
-        ultimoId++;
+        ultimoIdItem++;
         this.nombre = nombre;
-        this.inicial = inicial.slice(0,1);
+        this.inicial = nombre.slice(0,1);
         this.tipo = tipo;
-        this.perecedero = perecedero;
+        this.caducidad = caducidad;
     },
     // Inicializa la travesia
     descripcion: function () {
-        alert("La singladura " + this.idTravesia + " del día " + this.fecha.toDateString() + " en " 
-        + this.lugar + " duró " + this.duracion + " horas y recorriste " + this.distancia + "millas");
+        alert("El objeto " + this.nombre + " es " + this.tipo + " está guardado en: " + this.almacen[0] + this.almacen[1] + ", tiene caducidad " + this.caducidad.toDateString());
     },
 }
 
   function addItem() {
 
-    var fecha=prompt("Fecha de la travesía: dd.mm.aaaa");
-    var lugar=prompt("Lugar de la travesía: ");
-    var duracion=prompt("Duracion de la travesía: ");
-    var distancia = prompt("Distancia recorrida: ");
-    // var cadena = "Travesía realizada el dia: " + fecha + ". Distancia recorrida: " + distancia;
-    singladura = Object.create(Travesia);
-    singladura.init (arreglarFecha(fecha), lugar, duracion, distancia);
-    singladuras.push (singladura);
-    singladura.descripcion();
-    console.log (singladuras[singladuras.length-1].lugar);
-    console.log (singladuras.length);
+    var almacen =[];
+    almacen[0]=prompt("¿Dependencia?: ");
+    almacen[1]=prompt("¿Armario?: ");
+    var nombre=prompt("Nombre del objeto: ");
+    var tipo=prompt("Tipo de objeto (H)erramienta, (R)opa, (S)eguridad, (E)quipo, (C)omida: ");
+    var fechaCaducidad=prompt("Caducidad (dd.mm.aaaa): ");
+
+    item = Object.create(Items);
+    item.init (almacen, nombre, tipo ,arreglarFecha(fechaCaducidad));
+    objetos.push (item);
+    item.descripcion();
+    console.log (objetos[objetos.length-1].lugar);
+    console.log (objetos.length);
   }
   
   function searchItem() {
