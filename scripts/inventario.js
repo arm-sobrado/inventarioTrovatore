@@ -1,20 +1,21 @@
 window.onload = function() {
-    document.getElementById("botonNewTravesia").onclick=anadirTravesia
-    document.getElementById("botonVerTravesia").onclick=verTravesia
-    document.getElementById("botonEliminarTravesia").onclick=eliminarTravesia
+    document.getElementById("botonNewItem").onclick=addItem
+    document.getElementById("botonSearchItem").onclick=searchItem
+    document.getElementById("botonListContainer").onclick=exploreContainer
   };
-var ultimoId = 1;
+var ultimoIdItem = 1;
 var singladuras = [];  
-var Travesia = {
+var Items = {
      
-      // Inicializa la travesia
-      init: function (fecha, lugar, duracion, distancia) {
-        this.idTravesia = ultimoId;
+      // Inicializa el objeto inventariado
+      init: function (almacen,nombre, inicial, tipo, perecedero) {
+        this.idItem = ultimoIdItem;
+        this.almacen = almacen;
         ultimoId++;
-        this.fecha = fecha;
-        this.lugar = lugar;
-        this.duracion = duracion;
-        this.distancia = distancia;
+        this.nombre = nombre;
+        this.inicial = inicial.slice(0,1);
+        this.tipo = tipo;
+        this.perecedero = perecedero;
     },
     // Inicializa la travesia
     descripcion: function () {
@@ -23,7 +24,7 @@ var Travesia = {
     },
 }
 
-  function anadirTravesia() {
+  function addItem() {
 
     var fecha=prompt("Fecha de la travesía: dd.mm.aaaa");
     var lugar=prompt("Lugar de la travesía: ");
@@ -38,11 +39,11 @@ var Travesia = {
     console.log (singladuras.length);
   }
   
-  function verTravesia() {
+  function searchItem() {
       alert("Chequea las travesías que has realizado");
   }
   
-  function eliminarTravesia() {
+  function exploreContainer() {
       alert("Elimina una travesía");
   }
   
