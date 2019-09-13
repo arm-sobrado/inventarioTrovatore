@@ -1,1 +1,44 @@
 body { color: black; font-family: Verdana; text-align:center; }
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  /* .container img {
+    width: auto;
+    height: auto;
+    position: absolute;
+  } */
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container .A1 {
+    position: absolute;
+    top: 17%;
+    left: 43%;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 13px 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .container .A2 {
+    position: absolute;
+    top: 22%;
+    left: 23%;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 11px 34px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .container .btn:hover {
+    background-color: black;
+  }
