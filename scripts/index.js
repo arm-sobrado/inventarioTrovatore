@@ -25,19 +25,8 @@ var Items = {
 
   function addItem() {
 
-    var almacen =[];
-    almacen[0]=prompt("¿Dependencia?: ");
-    almacen[1]=prompt("¿Armario?: ");
-    var nombre=prompt("Nombre del objeto: ");
-    var tipo=prompt("Tipo de objeto (H)erramienta, (R)opa, (S)eguridad, (E)quipo, (C)omida: ");
-    var fechaCaducidad=prompt("Caducidad (dd.mm.aaaa): ");
-
-    item = Object.create(Items);
-    item.init (almacen, nombre, tipo ,arreglarFecha(fechaCaducidad));
-    objetos.push (item);
-    item.descripcion();
-    console.log (objetos[objetos.length-1].lugar);
-    console.log (objetos.length);
+    window.open("insertarObjeto.html");
+    
   }
   
   function searchItem() {
