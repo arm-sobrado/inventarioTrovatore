@@ -7,20 +7,14 @@ window.onload = function() {
   document.getElementById("botonA4").onclick=this.addItemA5
   };
 
-// Tengo que conseguir que al hacer click en el botón A1, se envíe como parámetro "A1"
-// a una función "addItem" genérica. Para evitar hacer "addItemA1", "aadItemA2", etc.
-
-
-
-
 /* var ultimoIdItem = 1;
 var objetos = [];  
 var Items = {
      
       // Inicializa el objeto inventariado
-      init: function (almacen, nombre, tipo, caducidad) {
+      init: function (armario, nombre, tipo, caducidad) {
         this.idItem = ultimoIdItem;
-        this.almacen = almacen;
+        this.armario = armario;
         ultimoIdItem++;
         this.nombre = nombre;
         this.inicial = nombre.slice(0,1);
@@ -29,7 +23,7 @@ var Items = {
     },
     // Inicializa la travesia
     descripcion: function () {
-        alert("El objeto " + this.nombre + " es " + this.tipo + " está guardado en: " + this.almacen[0] + this.almacen[1] + ", tiene caducidad " + this.caducidad.toDateString());
+        alert("El objeto " + this.nombre + " es " + this.tipo + " está guardado en: " + this.armario[0] + this.almacen[1] + ", tiene caducidad " + this.caducidad.toDateString());
     },
 } */
 
