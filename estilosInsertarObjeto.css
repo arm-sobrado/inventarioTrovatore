@@ -1,79 +1,45 @@
 body { color: black; font-family: Verdana; text-align:center; }
 
-/* Container needed to position the button. Adjust the width as needed */
-.container {
-  position: relative;
-  }
-  
-  /* Make the image responsive */
-  /* .container img {
-    width: auto;
-    height: auto;
-    position: absolute;
-  } */
-  
-  /* Style the button and place it in the middle of the container/image */
-  .container .A1 {
-    position: absolute;
-    top: 11%;
-    left: 40%;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 4px 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 1px;
-  }
-  .container .A2 {
-    position: absolute;
-    top: 15%;
-    left: 32%;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 6px 42px;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-  }
-  .container .A3 {
-    position: absolute;
-    top: 28.5%;
-    left: 35.5%;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 9px 27px;
-    border: none;
-    cursor: pointer;
-    border-radius: 1px;
-  }
-  .container .A4 {
-    position: absolute;
-    top: 31.3%;
-    left: 31%;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 6px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 1px;
-  }
-  .container .A5 {
-    position: absolute;
-    top: 47.3%;
-    left: 30.6%;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    padding: 8.2px 19px;
-    border: none;
-    cursor: pointer;
-    border-radius: 1px;
-  }
+.botonArmario {
+  position: absolute;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+#botonA1 {
+  top: 14%;
+  left: 31%;
+  padding: 4px 18px;
+}
+#botonA2 {
+  top: 15%;
+  left: 32%;
+  padding: 6px 42px;
+  border-radius: 15px;
+}
+#botonA3 {
+  top: 28.5%;
+  left: 35.5%;
+  padding: 9px 27px;
+}
+#botonA4 {
+  top: 31.3%;
+  left: 31%;
+  padding: 6px 24px;
+}
+#botonA5 {
+  top: 47.3%;
+  left: 30.6%;
+  padding: 8.2px 19px;
+}
 
-  .container .btn:hover {
+.botonArmario .btn:hover {
     background-color: black;
   }
+
+  

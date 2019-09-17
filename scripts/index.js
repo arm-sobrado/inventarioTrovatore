@@ -1,5 +1,5 @@
 window.onload = function() {
-    document.getElementById("botonNewItem").onclick=addItem
+   // document.getElementById("botonNewItem").onclick=addItem
     document.getElementById("botonSearchItem").onclick=searchItem
     document.getElementById("botonListContainer").onclick=exploreContainer
   };
